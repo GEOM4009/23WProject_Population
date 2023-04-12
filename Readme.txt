@@ -88,7 +88,9 @@ CompletedData
      mock_telus_data.csv -> A mock dynamic file that could be used
      stat_can_data.csv -> A static data file that could be used (Population from Statistic Canada 2016)
   
-  index.html -> Sphinx Documentation about PopFinder. Please note that Sphinx autodocumentaion is removed from this version of the code. This is to view the fucntions in popFinder.py. 
+  docs -> Sphinx Documentation about PopFinder. Please note that Sphinx autodocumentaion is removed from this version of the code, perhaps in a future version it would be reinstated. 
+    This is to view the fucntions in popFinder.py. Open up ./docs/_build/index.html to view. 
+    Perhaps in the future, full sphinx documenation could be reinstaded. But as it was not requested by our client, we've decided to keep it out
   Readme.txt -> Gives infomation about the entire project
   environment.yml -> the conda enviroment (Please see above about how to get started)
   licence.txt -> the licence of this project
