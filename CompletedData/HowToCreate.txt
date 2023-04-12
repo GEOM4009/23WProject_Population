@@ -1,0 +1,221 @@
+------- This files were created by entering the following data ------ 
+run popFinder "./TestData/ExportedArea - Shapefile/ExportedAreas.shp" "./TestData/stat_can_data.csv" "./TestData/mock_telus_data.csv"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 1
+
+
+You entered: 1
+
+Please enter your kml path: ./TestData/TestPath.kml
+./TestData/TestPath.kml
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 1
+
+
+You entered: 1
+
+Please enter your kml path: ./TestData/Test2KML.kml
+./TestData/Test2KML.kml
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 3
+
+
+You entered: 3
+
+C:\Users\Grace\miniconda3\envs\geom4009\lib\site-packages\geopandas\array.py:1406: UserWarning: CRS not set for some of the concatenation inputs. Setting output's CRS as WGS 84 (the single non-null crs provided).
+  warnings.warn(
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 2
+
+
+You entered: 2
+
+Please enter your date and time: 2023-02-20 12:00 AM
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 2
+
+
+You entered: 2
+
+Please enter your date and time: 2023-02-20 5:00 PM
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 3
+
+
+You entered: 3
+
+C:\Users\Grace\miniconda3\envs\geom4009\lib\site-packages\geopandas\array.py:1406: UserWarning: CRS not set for some of the concatenation inputs. Setting output's CRS as WGS 84 (the single non-null crs provided).
+  warnings.warn(
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 4
+
+
+You entered: 4
+
+             AOI_File_Name  Affected_Area  STAT_POP  STAT_POP_DENSITY  \
+0  ./TestData/TestPath.kml           1.16     383.0         330.17241   
+0  ./TestData/Test2KML.kml           3.22   1,701.0         528.26087   
+
+                                            geometry  \
+0  LINESTRING Z (-79.69747 43.70838 0.00000, -79....   
+0  MULTILINESTRING Z ((-79.39360 43.62745 0.00000...   
+
+                                     Buffer_geometry  POP_2023-02-20 00:00:00  \
+0  POLYGON ((-79.61453 43.68089, -79.53556 43.685...                    383.0   
+0  POLYGON ((-79.49879 43.65367, -79.49897 43.653...                  1,701.0   
+
+   POP_DENSITY2023-02-20 00:00:00  POP_2023-02-20 17:00:00  \
+0                       330.17241                    425.0   
+0                       528.26087                  1,887.0   
+
+   POP_DENSITY2023-02-20 17:00:00  
+0                       366.37931  
+0                       586.02484  
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 5
+
+
+You entered: 5
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 6
+C:\Users\Grace\Documents\School\2023 - WINTER\GEOM 4009\Project\New\PopulationProj\popFinder.py:499: UserWarning: Column names longer than 10 characters will be truncated when saved to ESRI Shapefile.
+  sh_gdf.to_file("FlightPath.shp")
+
+
+You entered: 6
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: 7
+
+
+You entered: 7
+
+C:\Users\Grace\Documents\School\2023 - WINTER\GEOM 4009\Project\New\PopulationProj\popFinder.py:305: UserWarning: Geometry is in a geographic CRS. Results from 'centroid' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
+
+  m = folium.Map(location=[first_aoi.centroid.y, first_aoi.centroid.x], zoom_start=12, tiles="Stamen Terrain")
+C:\Users\Grace\Documents\School\2023 - WINTER\GEOM 4009\Project\New\PopulationProj\popFinder.py:305: UserWarning: Geometry is in a geographic CRS. Results from 'centroid' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
+
+  m = folium.Map(location=[first_aoi.centroid.y, first_aoi.centroid.x], zoom_start=12, tiles="Stamen Terrain")
+<class 'folium.folium.Map'>
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Please enter a number from the list below: 
+	1) to add a Area Of Interest
+	2) to add a time frame
+	3) to recalculate your data
+	4) to print your data
+	5) to export your data as a csv
+	6) to export your data as a shp 
+	7) to create and view your map
+Please enter some input, or type 'done' to finish: done

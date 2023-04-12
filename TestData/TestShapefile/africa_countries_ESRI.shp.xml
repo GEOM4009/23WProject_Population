@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<Esri>
+		<CreaDate>20131023</CreaDate>
+		<CreaTime>09570800</CreaTime>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncDate>20131021</SyncDate>
+		<SyncTime>17300700</SyncTime>
+		<ModDate>20131021</ModDate>
+		<ModTime>17300700</ModTime>
+		<Sync>FALSE</Sync>
+		<ArcGISFormat>1.0</ArcGISFormat><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\PCLAB449-DAS\C$\gis_GEOM_1004\Assignment_4\Assign4_data\africa_countries_ESRI</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><itemName Sync="TRUE">ESRI_African_CountriesCopy_D</itemName><imsContentType Sync="TRUE">002</imsContentType></itemProps><copyHistory><copy source="c:\gis_GEOM_1004\Assignment_4\africa_countries_ESRI" dest="\\PCLAB449-DAS\C$\gis_GEOM_1004\Assignment_4\Assign4_data\africa_countries_ESRI" date="20131023" time="09570800"></copy></copyHistory><coordRef><type Sync="TRUE">Geographic</type><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn><peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.0'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4326]]&lt;/WKT&gt;&lt;XOrigin&gt;-399.99999999999989&lt;/XOrigin&gt;&lt;YOrigin&gt;-399.99999999999989&lt;/YOrigin&gt;&lt;XYScale&gt;1111948722.2222221&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.9831528411952133e-009&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4326&lt;/WKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml></coordRef><lineage><Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Dissolve" Date="20131021" Time="173013">Dissolve ESRI_African_CountriesCopy C:\Users\DerekASmith\Documents\ArcGIS\Default.gdb\ESRI_African_CountriesCopy_D COUNTRY # MULTI_PART DISSOLVE_LINES</Process><Process ToolSource="c:\users\grace\appdata\local\programs\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\JoinField" Date="20230318" Time="121906">JoinField africa_countries_ESRI COUNTRY ZonalStatsCountries COUNTRY MEAN "Select transfer fields" #</Process></lineage></DataProperties></Esri>
+	<idinfo>
+		<native Sync="TRUE">Microsoft Windows Vista Version 6.1 (Build 7600) ; Esri ArcCatalog 9.3.1.4000</native>
+		<descript>
+			<langdata Sync="TRUE">en</langdata>
+			<abstract>World Countries represents the boundaries for the countries of the world.</abstract>
+			<purpose>World Countries provides a base map layer for the countries of the world.</purpose>
+			<supplinf>Largest scale when displaying the data: 1:250,000.</supplinf>
+		</descript>
+		<citation>
+			<citeinfo>
+				<pubdate>20120301</pubdate>
+				<title>World Countries</title>
+				<ftname Sync="TRUE">country.sdc</ftname>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<edition>2012</edition>
+				<serinfo>
+					<sername>Data &amp; Maps for ArcGIS®</sername>
+					<issue>2012 - World, Europe, and United States</issue>
+				</serinfo>
+				<pubinfo>
+					<pubplace>Redlands, California, USA</pubplace>
+					<publish>Esri</publish>
+				</pubinfo>
+				<othercit>Location: \world\data</othercit>
+				<origin>DeLorme Publishing Company, Inc.</origin>
+				<origin>Esri</origin>
+			</citeinfo>
+		</citation>
+		<timeperd>
+			<current>publication date</current>
+			<timeinfo>
+				<mdattim>
+					<sngdate>
+						<caldate>2010</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20080131</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20071215</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>20100630</caldate>
+					</sngdate>
+					<sngdate><caldate>201109</caldate></sngdate><sngdate><caldate>20110809</caldate></sngdate></mdattim>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Annually</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-180.000000</westbc>
+				<eastbc Sync="TRUE">180.000000</eastbc>
+				<northbc Sync="TRUE">83.665491</northbc>
+				<southbc Sync="TRUE">-90.000000</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">-180.000000</leftbc>
+				<rightbc Sync="TRUE">180.000000</rightbc>
+				<bottombc Sync="TRUE">-90.000000</bottombc>
+				<topbc Sync="TRUE">83.665491</topbc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>polygon</themekey>
+				<themekey>countries</themekey>
+				<themekey>international boundaries</themekey>
+				<themekey>coastlines</themekey>
+				<themekey>ISO codes</themekey>
+				<themekey>boundaries</themekey>
+			</theme>
+			<place>
+				<placekey>World</placekey>
+				<placekt>None</placekt>
+			</place>
+			<temporal>
+				<tempkt>None</tempkt>
+				<tempkey>2010</tempkey>
+				<tempkey>2008</tempkey>
+				<tempkey>2007</tempkey>
+				<tempkey>2011</tempkey></temporal>
+		</keywords>
+		<accconst>Access granted to Licensee only.</accconst>
+		<useconst>The data are provided by multiple, third party data vendors under license to Esri for inclusion on Data &amp; Maps for ArcGIS® for use with Esri® software.  Each data vendor has its own data licensing policies and may grant varying redistribution rights to end users. Please consult the redistribution rights below for this data set provided on Data &amp; Maps. As used herein, “Geodata” shall mean any digital data set consisting of geographic data coordinates and associated attributes.
+
+The redistribution rights for this data set: Redistribution rights are granted by the data vendor for hard-copy renditions or static, electronic map images (e.g. .gif, .jpeg, etc.) that are plotted, printed, or publicly displayed with proper metadata and source/copyright attribution to the respective data vendor(s).
+
+The terms and conditions below apply to all the data sets provided on Data &amp; Maps.
+
+Proprietary Rights and Copyright: Licensee acknowledges that the Data and Related Materials contain proprietary and confidential property of Esri and its licensor(s). The Data and Related Materials are owned by Esri and its licensor(s) and are protected by United States copyright laws and applicable international copyright treaties and/or conventions.
+
+Limited Warranty and Disclaimer: Esri warrants that the media upon which the Data and Related Materials are provided will be free from defects in materials and workmanship under normal use and service for a period of ninety (90) days from the date of receipt.
+
+THE DATA AND RELATED MATERIALS ARE EXCLUDED FROM THE LIMITED WARRANTY, AND THE LICENSEE EXPRESSLY ACKNOWLEDGES THAT THE DATA CONTAINS SOME NONCONFORMITIES, DEFECTS, OR ERRORS. Esri DOES NOT WARRANT THAT THE DATA WILL MEET LICENSEE'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. Esri IS NOT INVITING RELIANCE ON THIS DATA, AND THE LICENSEE SHOULD ALWAYS VERIFY ACTUAL DATA.
+
+EXCEPT FOR THE LIMITED WARRANTY SET FORTH ABOVE, THE DATA AND RELATED MATERIALS CONTAINED THEREIN ARE PROVIDED "AS-IS," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+HIGH RISK ACTIVITIES: 
+(A) THE DATA AND RELATED MATERIALS ARE NOT FAULT-TOLERANT AND ARE NOT DESIGNED, MANUFACTURED, OR INTENDED FOR USE OR RESALE FOR INSURANCE UNDERWRITING OR WITH CRITICAL HEALTH AND SAFETY OR ONLINE CONTROL EQUIPMENT IN HAZARDOUS ENVIRONMENTS THAT REQUIRE FAIL-SAFE PERFORMANCE, INCLUDING, BUT NOT LIMITED TO THE OPERATION OF NUCLEAR FACILITIES, NAVIGATION OR GUIDANCE (I.E., AIRCRAFT, NAUTICAL VEHICLE, ETC.), OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL, EMERGENCY RESPONSE, TERRORISM PREVENTION OR RESPONSE, LIFE SUPPORT, OR WEAPONS SYSTEMS ("HIGH RISK ACTIVITIES"). Esri SPECIFICALLY DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTY OF FITNESS FOR HIGH RISK ACTIVITIES.
+
+(B) TO THE EXTENT PERMITTED BY LAW, LICENSEE AGREES TO INDEMNIFY, DEFEND, AND HOLD Esri, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUBCONTRACTORS, LICENSORS, SUCCESSORS, AND ASSIGNS HARMLESS FROM AND AGAINST ANY AND ALL LIABILITY, LOSSES, CLAIMS, EXPENSES (INCLUDING ATTORNEYS' FEES), DEMANDS, OR DAMAGES OF ANY KIND, INCLUDING DIRECT, INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR IN ANY WAY CONNECTED WITH LICENSEE'S USE OR PERMITTING THE USE BY OTHERS OF THE DATA, AND VENDOR'S HARDWARE OR SOFTWARE FOR HIGH RISK ACTIVITIES. DELIVERY OF THE DATA, AND VENDOR'S HARDWARE OR SOFTWARE DOES NOT CONSTITUTE A WAIVER OF THE RIGHTS AND OBLIGATIONS SET FORTH IN THIS ARTICLE.
+
+Exclusive Remedy and Limitation of Liability: The entire liability of Esri or its licensor(s) and Licensee's exclusive remedy shall be to terminate the Agreement upon Licensee returning the Data and Related Materials to Esri with a copy of Licensee's invoice/receipt and Esri returning the license fees paid to Licensee.
+
+IN NO EVENT SHALL Esri AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT Esri OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.
+
+Third Party Beneficiary: Esri's licensor(s) has (have) authorized Esri to (sub)distribute and (sub)license its (their) data as incorporated into the Data and Related Materials. As an intended third party beneficiary to this Agreement, the Esri licensor(s) is (are) entitled to directly enforce, in its own name, the rights and obligations undertaken by the Licensee and to seek all legal and equitable remedies as are afforded to Esri.
+
+In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata. In compliance with FGDC metadata standards, Esri has attempted to practice proper metadata methodologies by providing any data source information, descriptions, and file names to assist in this effort.</useconst>
+		<natvform Sync="TRUE">SDC Feature Database</natvform>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Esri</cntorg>
+					<cntper>ArcGIS Content Team</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>380 New York Street</address>
+					<city>Redlands</city>
+					<state>California</state>
+					<postal>92373-8100</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>909-793-2853</cntvoice>
+				<cntfax>909-793-5953</cntfax>
+				<cntemail>info@esri.com</cntemail>
+				<hours>7:00 a.m.–5:30 p.m. Pacific time, Monday–Friday</hours>
+				<cntinst>In the United States–
+Please direct all inquiries regarding software/data pricing and consulting services to your local Esri Regional Office.  For support, you may contact Esri Support Center by telephone (voice) between 5:00 a.m. and 5:00 p.m. Pacific time, Monday through Friday, by dialing 888-377-4575; facsimile (fax) available at 909-792-0960; electronic mail (e-mail) support@esri.com; or visit http://support.esri.com/; Esri holidays excluded. 
+
+Outside the United States–
+Please direct all inquiries regarding software/data pricing, sales, support, and consulting services to your local Esri Office.  This information can be found at http://www.esri.com/about-esri/locations.html.  
+
+For other questions or comments, you may contact Esri headquarters by e-mail, telephone, or fax or write to us.</cntinst>
+			</cntinfo>
+		</ptcontac>
+	</idinfo>
+	<metainfo>
+		<langmeta Sync="TRUE">en</langmeta>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntper>ArcGIS Content Team</cntper>
+					<cntorg>Esri</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<city>Redlands</city>
+					<state>California</state>
+					<postal>92373-8100</postal>
+					<address>380 New York Street</address>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>909-793-2853</cntvoice>
+				<cntfax>909-793-5953</cntfax>
+				<cntemail>info@esri.com</cntemail>
+				<hours>7:00 a.m.–5:30 p.m. Pacific time, Monday–Friday</hours>
+			</cntinfo>
+		</metc>
+		<metd Sync="TRUE">20110930</metd>
+	</metainfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="ESRI_African_CountriesCopy_D"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">4</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+			</cordsysn>
+			<geograph>
+				<geogunit Sync="TRUE">Decimal degrees</geogunit>
+				<latres Sync="TRUE">0.000000</latres>
+				<longres Sync="TRUE">0.000000</longres>
+			</geograph>
+			<geodetic>
+				<horizdn Sync="TRUE">D_WGS_1984</horizdn>
+				<ellips Sync="TRUE">WGS_1984</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257224</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="ESRI_African_CountriesCopy_D">
+			<enttyp>
+				<enttypl Sync="TRUE">ESRI_African_CountriesCopy_D</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">0</enttypc>
+				<enttypd>The polygons represent the boundaries for the countries of the world.</enttypd>
+				<enttypds>Esri</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">ObjectID</attrlabl>
+				<attalias Sync="TRUE">OBJECTID</attalias>
+				<attrtype Sync="TRUE">OID</attrtype>
+				<attwidth Sync="TRUE">4</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attwidth Sync="TRUE">0</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">COUNTRY</attrlabl>
+				<attalias Sync="TRUE">COUNTRY</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">50</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdefs>Esri, CIA The World Factbook</attrdefs>
+				<attrdef>The country name.</attrdef>
+				<attrdomv>
+					<udom>Names for the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Shape_Length</attrlabl><attalias Sync="TRUE">Shape_Length</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Length of feature in internal units.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape_Area</attrlabl><attalias Sync="TRUE">Shape_Area</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize Sync="TRUE">19.662</transize>
+					<dssize Sync="TRUE">19.662</dssize>
+					<formname>SDC</formname>
+					<filedec>ArcGIS® software</filedec>
+					<formspec>The SDC file contains the geospatial and attribute data. The SDI file contains the spatial index. The PRJ file contains the coordinate system information (optional). The XML file (*.sdc.xml) contains the metadata describing the data set (optional).</formspec>
+				</digtinfo>
+				<digtopt>
+					<offoptn>
+						<offmedia>DVD–ROM</offmedia>
+						<reccap>
+							<recden>4.38 or 7.95</recden>
+							<recdenu>GB (gigabytes)</recdenu>
+						</reccap>
+						<recfmt>UDF (Universal Disc Format)</recfmt>
+					</offoptn>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://www.ArcGIS.com</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>Software purchase price</fees>
+			<ordering>Data &amp; Maps is available only as part of Esri® software.</ordering>
+		</stdorder>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Esri; Esri Offices</cntorg>
+				</cntorgp>
+				<cntinst>In the United States, contact the Esri Telebusiness staff at 800-447-9778 for more information about our software and data.
+
+Outside the United States, please direct all inquiries to your local Esri Office.  This information can be found at http://www.esri.com/about-esri/locations.html.</cntinst>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>380 New York Street</address>
+					<city>Redlands</city>
+					<state>California</state>
+					<postal>92373-8100</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>800-447-9778</cntvoice>
+			</cntinfo>
+		</distrib>
+		<techpreq>To use this data requires software that supports SDC files.</techpreq>
+		<distliab>See use constraints.</distliab>
+		<resdesc>Offline Data, Downloadable Data</resdesc>
+	</distinfo>
+	<dataqual>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<title>Admin_Boundaries, Country_Boundaries</title>
+						<origin>DeLorme Publishing Company, Inc.</origin>
+						<pubdate>2010</pubdate>
+						<geoform>vector digital data</geoform>
+						<pubinfo>
+							<publish>DeLorme Publishing Company, Inc.</publish>
+							<pubplace>Yarmouth, Maine, USA</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>A subset of DeLorme World Base Map (DWBM).</sername>
+							<issue>2010</issue>
+						</serinfo>
+						<onlink>http://www.delorme.com/</onlink>
+					</citeinfo>
+				</srccite>
+				<srcscale>1000000</srcscale>
+				<typesrc>DVD-ROM</typesrc>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>2010</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+				<srccitea>DeLorme World Base Map 2010</srccitea>
+				<srccontr>Attribute and geospatial data</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>The following steps were performed by Esri: Copied the data set from Esri Data &amp; Maps 10 Update World Administrative Divisions. Dissolved features on fields COUNTRY, ISO_CC, CONTINENT, LAND_TYPE, and LAND_RANK to create the country features. Deleted fields not needed. Converted the data set to SDC. Created ArcGIS® layer file (.lyr), projection file (.prj), and spatial indices.</procdesc>
+				<procdate>20110412</procdate>
+				<procsv>ArcGIS® 10, ArcGIS 9</procsv>
+				<srcused>DeLorme World Base Map 2010</srcused>
+				<srcused>BS ISO 3166-2:2007</srcused>
+				<srcused>Esri Data &amp; Maps 10</srcused>
+			</procstep>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<pubdate>20080131, 20110809</pubdate>
+						<title>BRITISH STANDARD: Codes for the representation of names of countries and their subdivisions; Updates on ISO 3166</title>
+						<geoform>document</geoform>
+						<othercit>INTERNATIONAL STANDARD, ISO 3166-2, Second edition, 2007-12-15; ISO 3166-1 Newsletter VI-10 (Code elements for South Sudan)</othercit>
+						<onlink>http://www.iso.org/iso/home.html</onlink>
+						<origin>International Organization for Standardization (ISO)</origin>
+						<pubinfo>
+							<publish>ISO</publish>
+							<pubplace>online</pubplace>
+						</pubinfo>
+						<onlink>http://www.iso.org/iso/country_codes/updates_on_iso_3166.htm</onlink>
+					</citeinfo>
+				</srccite>
+				<typesrc>online</typesrc>
+				<srccitea>BS ISO 3166-2:2007 and Updates on ISO 3166</srccitea>
+				<srccontr>Attribute data</srccontr>
+				<srctime>
+					<timeinfo>
+						<mdattim>
+							<sngdate>
+								<caldate>20080131</caldate>
+							</sngdate>
+							<sngdate>
+								<caldate>20071215</caldate>
+							</sngdate>
+							<sngdate>
+								<caldate>20110809</caldate>
+							</sngdate>
+						</mdattim>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>The World Factbook Online</srccitea>
+				<srccontr>Attribute and geospatial data</srccontr>
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Central Intelligence Agency</origin>
+						<title>The World Factbook (online)</title>
+						<pubdate>201109</pubdate>
+						<geoform>document</geoform>
+						<othercit>The online Factbook is updated weekly.</othercit>
+						<onlink>https://www.cia.gov/library/publications/the-world-factbook/</onlink>
+						<pubinfo>
+							<publish>U.S. Central Intelligence Agency</publish>
+							<pubplace>online</pubplace>
+						</pubinfo>
+					</citeinfo>
+				</srccite>
+				<srctime>
+					<timeinfo>
+						<sngdate><caldate>201109</caldate></sngdate></timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<othercit>Provides the CONTINENT field.</othercit>
+						<origin>Esri</origin>
+						<pubdate>20100630</pubdate>
+						<title>World Continents</title>
+						<edition>10</edition>
+						<geoform>vector digital data</geoform>
+						<onlink>http://www.esri.com/</onlink>
+						<serinfo>
+							<sername>Esri® Data &amp; Maps</sername>
+							<issue>10 - World, Europe, and United States</issue>
+						</serinfo>
+						<pubinfo>
+							<pubplace>Redlands, California, USA</pubplace>
+							<publish>Esri</publish>
+						</pubinfo>
+					</citeinfo>
+				</srccite>
+				<typesrc>DVD-ROM</typesrc>
+				<srccitea>Esri Data &amp; Maps 10</srccitea>
+				<srccontr>Attribute data</srccontr>
+				<srctime>
+					<timeinfo>
+						<sngdate>
+							<caldate>20100630</caldate>
+						</sngdate>
+					</timeinfo>
+					<srccurr>publication date</srccurr>
+				</srctime>
+			</srcinfo>
+			<procstep><srcused>The World Factbook Online</srcused><procsv>ArcGIS® 10, ArcGIS 9</procsv><srcused>Updates on ISO 3166</srcused><procdate>20110912</procdate><procdesc>The following steps were performed by Esri: Used the Sudan administrative division boundaries from Esri Data &amp; Maps 10 Update World Administrative Divisions to split Sudan into Sudan and South Sudan. Selected the new South Sudan polygon and updated its field values. Converted the data set to SDC. Created ArcGIS® layer file (.lyr), projection file (.prj), and spatial indices.</procdesc></procstep></lineage>
+		<posacc>
+			<horizpa>
+				<horizpar>The level of detail for each feature is generally better than what is traditionally utilized in a 1:500,000 scale product. The positional accuracy is typical of a 1:100,000 scale map, or +/-50 meters 90% of the time.</horizpar>
+			</horizpa>
+		</posacc>
+		<logic>The shapefile is converted to SDC (Smart Data Compression) format using tools in ArcGIS.  The SDC data set is then imported into a file geodatabase to verify, validate, and if needed repair the geometry.</logic>
+		<complete>After processing, the data set is checked for drawing display and number of records and file sizes compared with source materials.</complete>
+		<attracc>
+			<attraccr>All data has been reviewed for correct application of attributes and is accurate to current conditions.</attraccr>
+		</attracc>
+	</dataqual>
+	<mdDateSt Sync="TRUE">20131021</mdDateSt>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows Server 2008 R2 Version 6.1 (Build 7601) Service Pack 1; ESRI ArcGIS 10.0.0.2414</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="eng" country="USA"/>
+		</dataLang>
+		<idCitation><datasetSeries><seriesName>Data &amp; Maps for ArcGIS®</seriesName><issId>2012 - World, Europe, and United States</issId></datasetSeries>
+			<resTitle>World Countries</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"/>
+			</presForm>
+			<resEd>2012</resEd>
+			<resEdDate>20120301</resEdDate>
+			<resRefDate>
+				<refDate>20110412</refDate>
+				<refDateType>
+					<DateTypCd value="001"/>
+				</refDateType>
+			</resRefDate>
+			<citRespParty>
+				<rpIndName>ArcGIS Content Team</rpIndName>
+				<rpOrgName>Esri</rpOrgName>
+				<rpPosName>ArcGIS Content Team</rpPosName>
+				<role>
+					<RoleCd value="007"/>
+				</role>
+				<rpCntInfo>
+					<cntAddress>
+						<delPoint>380 New York Street</delPoint>
+						<city>Redlands</city>
+						<adminArea>California</adminArea>
+						<postCode>92373-8100</postCode>
+						<eMailAdd>info@esri.com</eMailAdd>
+						<country>us</country>
+					</cntAddress>
+					<cntPhone>
+						<voiceNum>909-793-2853</voiceNum>
+						<faxNum>909-793-5953</faxNum>
+					</cntPhone>
+				</rpCntInfo>
+			</citRespParty>
+			<citRespParty>
+				<rpOrgName>DeLorme Publishing Company, Inc.</rpOrgName>
+				<rpCntInfo>
+					<cntAddress>
+						<city>Yarmouth</city>
+						<adminArea>Maine</adminArea>
+						<country>us</country>
+					</cntAddress>
+				</rpCntInfo>
+				<role>
+					<RoleCd value="006"/>
+				</role>
+			</citRespParty>
+			<resRefDate>
+				<refDate>20120301</refDate>
+				<refDateType>
+					<DateTypCd value="002"/>
+				</refDateType>
+			</resRefDate>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"/>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">-180</westBL>
+					<eastBL Sync="TRUE">180</eastBL>
+					<northBL Sync="TRUE">83.665491</northBL>
+					<southBL Sync="TRUE">-90</southBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+			<tempEle><TempExtent><exTemp><TM_GeometricPrimitive><TM_Period><begin>20071215</begin><end>201109</end></TM_Period></TM_GeometricPrimitive></exTemp></TempExtent></tempEle></dataExt>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-180</westBL>
+			<eastBL Sync="TRUE">180</eastBL>
+			<northBL Sync="TRUE">83.665491</northBL>
+			<southBL Sync="TRUE">-90</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+		<idAbs>World Countries represents the boundaries for the countries of the world.</idAbs>
+		<idPurp>World Countries provides a base map layer for the countries of the world.</idPurp>
+		<resConst>
+			<Consts>
+				<useLimit>See legal constraints.</useLimit>
+			</Consts>
+			<LegConsts>
+				<accessConsts>
+					<RestrictCd value="005"/>
+				</accessConsts>
+				<othConsts>The data are provided by multiple, third party data vendors under license to Esri for inclusion on Data &amp; Maps for ArcGIS® for use with Esri® software.  Each data vendor has its own data licensing policies and may grant varying redistribution rights to end users. Please consult the redistribution rights below for this data set provided on Data &amp; Maps. As used herein, “Geodata” shall mean any digital data set consisting of geographic data coordinates and associated attributes.
+
+The redistribution rights for this data set: Redistribution rights are granted by the data vendor for hard-copy renditions or static, electronic map images (e.g. .gif, .jpeg, etc.) that are plotted, printed, or publicly displayed with proper metadata and source/copyright attribution to the respective data vendor(s).
+
+The terms and conditions below apply to all the data sets provided on Data &amp; Maps.
+
+Proprietary Rights and Copyright: Licensee acknowledges that the Data and Related Materials contain proprietary and confidential property of Esri and its licensor(s). The Data and Related Materials are owned by Esri and its licensor(s) and are protected by United States copyright laws and applicable international copyright treaties and/or conventions.
+
+Limited Warranty and Disclaimer: Esri warrants that the media upon which the Data and Related Materials are provided will be free from defects in materials and workmanship under normal use and service for a period of ninety (90) days from the date of receipt.
+
+THE DATA AND RELATED MATERIALS ARE EXCLUDED FROM THE LIMITED WARRANTY, AND THE LICENSEE EXPRESSLY ACKNOWLEDGES THAT THE DATA CONTAINS SOME NONCONFORMITIES, DEFECTS, OR ERRORS. Esri DOES NOT WARRANT THAT THE DATA WILL MEET LICENSEE'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL BE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR WILL BE CORRECTED. Esri IS NOT INVITING RELIANCE ON THIS DATA, AND THE LICENSEE SHOULD ALWAYS VERIFY ACTUAL DATA.
+
+EXCEPT FOR THE LIMITED WARRANTY SET FORTH ABOVE, THE DATA AND RELATED MATERIALS CONTAINED THEREIN ARE PROVIDED "AS-IS," WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+HIGH RISK ACTIVITIES: 
+(A) THE DATA AND RELATED MATERIALS ARE NOT FAULT-TOLERANT AND ARE NOT DESIGNED, MANUFACTURED, OR INTENDED FOR USE OR RESALE FOR INSURANCE UNDERWRITING OR WITH CRITICAL HEALTH AND SAFETY OR ONLINE CONTROL EQUIPMENT IN HAZARDOUS ENVIRONMENTS THAT REQUIRE FAIL-SAFE PERFORMANCE, INCLUDING, BUT NOT LIMITED TO THE OPERATION OF NUCLEAR FACILITIES, NAVIGATION OR GUIDANCE (I.E., AIRCRAFT, NAUTICAL VEHICLE, ETC.), OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL, EMERGENCY RESPONSE, TERRORISM PREVENTION OR RESPONSE, LIFE SUPPORT, OR WEAPONS SYSTEMS ("HIGH RISK ACTIVITIES"). Esri SPECIFICALLY DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTY OF FITNESS FOR HIGH RISK ACTIVITIES.
+
+(B) TO THE EXTENT PERMITTED BY LAW, LICENSEE AGREES TO INDEMNIFY, DEFEND, AND HOLD Esri, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUBCONTRACTORS, LICENSORS, SUCCESSORS, AND ASSIGNS HARMLESS FROM AND AGAINST ANY AND ALL LIABILITY, LOSSES, CLAIMS, EXPENSES (INCLUDING ATTORNEYS' FEES), DEMANDS, OR DAMAGES OF ANY KIND, INCLUDING DIRECT, INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR IN ANY WAY CONNECTED WITH LICENSEE'S USE OR PERMITTING THE USE BY OTHERS OF THE DATA, AND VENDOR'S HARDWARE OR SOFTWARE FOR HIGH RISK ACTIVITIES. DELIVERY OF THE DATA, AND VENDOR'S HARDWARE OR SOFTWARE DOES NOT CONSTITUTE A WAIVER OF THE RIGHTS AND OBLIGATIONS SET FORTH IN THIS ARTICLE.
+
+Exclusive Remedy and Limitation of Liability: The entire liability of Esri or its licensor(s) and Licensee's exclusive remedy shall be to terminate the Agreement upon Licensee returning the Data and Related Materials to Esri with a copy of Licensee's invoice/receipt and Esri returning the license fees paid to Licensee.
+
+IN NO EVENT SHALL Esri AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS EXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY BUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON ANY THEORY OF LIABILITY, AND WHETHER OR NOT Esri OR ITS LICENSOR(S) HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE REMEDY.
+
+Third Party Beneficiary: Esri's licensor(s) has (have) authorized Esri to (sub)distribute and (sub)license its (their) data as incorporated into the Data and Related Materials. As an intended third party beneficiary to this Agreement, the Esri licensor(s) is (are) entitled to directly enforce, in its own name, the rights and obligations undertaken by the Licensee and to seek all legal and equitable remedies as are afforded to Esri.
+
+In the event that the data vendor(s) has (have) granted the end user permission to redistribute the Geodata, please use proper proprietary or copyright attribution for the various data vendor(s), and provide the associated metadata file(s) with the Geodata. In compliance with FGDC metadata standards, Esri has attempted to practice proper metadata methodologies by providing any data source information, descriptions, and file names to assist in this effort.</othConsts>
+				<useConsts>
+					<RestrictCd value="008"/>
+				</useConsts>
+			</LegConsts>
+		</resConst>
+		<dataScale>
+			<equScale>
+				<rfDenom>1000000</rfDenom>
+			</equScale>
+		</dataScale>
+		<descKeys KeyTypCd="005">
+			<keyTyp>
+				<KeyTypCd value="005"/>
+			</keyTyp>
+			<keyword>polygon, countries, international boundaries, coastlines, ISO codes, boundaries</keyword><thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66"></thesaName></descKeys>
+		<descKeys KeyTypCd="002">
+			<keyTyp>
+				<KeyTypCd value="002"/>
+			</keyTyp>
+			<keyword>World</keyword>
+			<thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66"></thesaName></descKeys>
+		<descKeys KeyTypCd="004">
+			<keyTyp>
+				<KeyTypCd value="004"/>
+			</keyTyp>
+			<keyword>2010, 2008, 2007, 2011</keyword><thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66"></thesaName></descKeys>
+		<resMaint>
+			<maintFreq>
+				<MaintFreqCd value="008"/>
+			</maintFreq>
+		</resMaint>
+		<tpCat>
+			<TopicCatCd value="003"/>
+		</tpCat>
+		<idPoC Sync="TRUE">
+			<rpIndName Sync="TRUE">ArcGIS Content Team</rpIndName>
+			<rpOrgName Sync="TRUE">Esri</rpOrgName>
+			<rpPosName Sync="TRUE">ArcGIS Content Team</rpPosName>
+			<rpCntInfo>
+				<cntPhone>
+					<voiceNum Sync="TRUE">909-793-2853</voiceNum>
+					<faxNum Sync="TRUE">909-793-5953</faxNum>
+				</cntPhone>
+				<cntAddress>
+					<delPoint Sync="TRUE">380 New York Street</delPoint>
+					<city Sync="TRUE">Redlands</city>
+					<adminArea Sync="TRUE">California</adminArea>
+					<postCode Sync="TRUE">92373-8100</postCode>
+					<country Sync="TRUE">us</country>
+					<eMailAdd Sync="TRUE">info@esri.com</eMailAdd>
+				</cntAddress>
+			</rpCntInfo>
+			<role>
+				<RoleCd Sync="TRUE" value="007"/>
+			</role>
+		</idPoC>
+	</dataIdInfo>
+	<mdLang>
+		<languageCode Sync="TRUE" value="eng"/>
+	</mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"/>
+	</mdChar>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"/>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc>002</orDesc>
+					<orDesc>003</orDesc>
+					<linkage>http://www.ArcGIS.com</linkage>
+					<orFunct>
+						<OnFunctCd value="001"/>
+					</orFunct>
+				</onLineSrc>
+				<transSize Sync="TRUE">19.662</transSize>
+				<offLineMed>
+					<medName>
+						<MedNameCd value="003"/>
+					</medName>
+				</offLineMed>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">SDC Feature Database</formatName>
+			</distorFormat>
+			<distorCont>
+				<rpOrgName>Esri; Esri Offices</rpOrgName>
+				<rpCntInfo>
+					<cntAddress>
+						<delPoint>380 New York Street</delPoint>
+						<city>Redlands</city>
+						<adminArea>California</adminArea>
+						<postCode>92373-8100</postCode>
+						<country>us</country>
+					</cntAddress>
+					<cntPhone>
+						<voiceNum>800-447-9778</voiceNum>
+					</cntPhone>
+				</rpCntInfo>
+				<role>
+					<RoleCd value="005"/>
+				</role>
+			</distorCont>
+			<distorOrdPrc>
+				<ordInstr>Data &amp; Maps is available only as part of Esri® software.
+
+In the United States, contact the Esri Telebusiness staff at 800-447-9778 for more information about our software and data.
+
+Outside the United States, please direct all inquiries to your local Esri Office.  This information can be found at http://www.esri.com/about-esri/locations.html.</ordInstr>
+				<resFees>Software purchase price. Data &amp; Maps is available only as part of Esri® software. To use this data requires software that supports SDC files.</resFees>
+			</distorOrdPrc>
+		</distributor>
+		<distFormat><formatName Sync="TRUE">File Geodatabase Feature Class</formatName></distFormat></distInfo>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" code="4326">GCS_WGS_1984</identCode>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">7.4.1</idVersion></refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep>
+			<topLvl>
+				<TopoLevCd Sync="TRUE" value="001"/>
+			</topLvl>
+			<geometObjs Name="country">
+				<geoObjTyp>
+					<GeoObjTypCd Sync="TRUE" value="002"/>
+					<geoObjCnt Sync="TRUE">0</geoObjCnt></geoObjTyp>
+				<geoObjCnt Sync="TRUE">640</geoObjCnt>
+			</geometObjs>
+		</VectSpatRep>
+	</spatRepInfo>
+	<Binary>
+		<Thumbnail>
+			<Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACimxszRgumxj1XOcVXnmkaRoIflwvzSEZ257Aevf2461M5xhHmlsCVy1UL3VvG+x
+7iJWzjaXANZ0sUMSiCEzblwfLR2I2lucjpzg9feriRpEgSNFRB0VRgCuGWPSXuovkB9Ts0GTcKRj
+Py5bj147e9WY5FljWRGDIwDKR3BrOutyybywWPy2UNjO1j3I7jgf5PC2VxNBYwpcQMCihSykHgcb
+iOMeuOcVpRxan8WgnGxpUVXe8iCKYyJSzbAEYHnBPr6Cmi+QNslR43wT90sCB3yP64NdLqRTs3qT
+YtUVXF9alwq3EbEjPytnA9TjoKsVdwCiiigAooooAKKKKACiiigAooooAKKKKACiiigAprhijBDh
+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
+UUAFFFFABRRRQAUUUUAFFFFAH//Z</Data>
+		</Thumbnail>
+	</Binary>
+	<mdContact>
+		<rpIndName>ArcGIS Content Team</rpIndName>
+		<rpOrgName>Esri</rpOrgName>
+		<rpPosName>ArcGIS Content Team</rpPosName>
+		<rpCntInfo>
+			<cntAddress>
+				<delPoint>380 New York Street</delPoint>
+				<city>Redlands</city>
+				<adminArea>California</adminArea>
+				<postCode>92373-8100</postCode>
+				<eMailAdd>info@esri.com</eMailAdd>
+				<country>us</country>
+			</cntAddress>
+			<cntPhone>
+				<voiceNum>909-793-2853</voiceNum>
+				<faxNum>909-793-5953</faxNum>
+			</cntPhone>
+		</rpCntInfo>
+		<role>
+			<RoleCd value="010"/>
+		</role>
+	</mdContact>
+	<dqInfo>
+		<dataLineage>
+			<statement>DeLorme World Base Map 2010 (source 1 of 4) 
+
+DeLorme Publishing Company, Inc., 2010, Admin_Boundaries, Country_Boundaries: A subset of DeLorme World Base Map (DWBM). 2010, DeLorme Publishing Company, Inc., Yarmouth, Maine, USA. 
+
+Online links: 
+http://www.delorme.com/ 
+
+Type of source media: DVD-ROM
+Source scale denominator: 1000000
+Source contribution:
+Attribute and geospatial data
+
+
+BS ISO 3166-2:2007 and Updates on ISO 3166 (source 2 of 4) 
+
+International Organization for Standardization (ISO), 20080131, 20110809, BRITISH STANDARD: Codes for the representation of names of countries and their subdivisions; Updates on ISO 3166: ISO, online. 
+
+Online links: 
+http://www.iso.org/iso/home.html 
+http://www.iso.org/iso/country_codes/updates_on_iso_3166.htm 
+
+Other citation details: 
+INTERNATIONAL STANDARD, ISO 3166-2, Second edition, 2007-12-15; ISO 3166-1 Newsletter VI-10 (Code elements for South Sudan)
+
+Type of source media: online
+Source contribution:
+Attribute data
+
+
+The World Factbook Online (source 3 of 4) 
+
+U.S. Central Intelligence Agency, 201109, The World Factbook (online): U.S. Central Intelligence Agency, online. 
+
+Online links: 
+https://www.cia.gov/library/publications/the-world-factbook/ 
+
+Other citation details: 
+The online Factbook is updated weekly.
+
+Type of source media: online
+Source contribution:
+Attribute and geospatial data
+
+
+Esri Data &amp; Maps 10 (source 4 of 4) 
+
+Esri, 20100630, World Continents: Esri® Data &amp; Maps 10 - World, Europe, and United States, Esri, Redlands, California, USA. 
+
+Online links: 
+http://www.esri.com/ 
+
+Other citation details: 
+Provides the CONTINENT field.
+
+Type of source media: DVD-ROM
+Source contribution:
+Attribute data
+
+
+Date: 20110412 (change 1 of 2) 
+The following steps were performed by Esri: Copied the data set from Esri Data &amp; Maps 10 Update World Administrative Divisions. Dissolved features on fields COUNTRY, ISO_CC, CONTINENT, LAND_TYPE, and LAND_RANK to create the country features. Deleted fields not needed. Converted the data set to SDC. Created ArcGIS® layer file (.lyr), projection file (.prj), and spatial indices.
+
+Data sources used in this process: 
+DeLorme World Base Map 2010 
+BS ISO 3166-2:2007 
+Esri Data &amp; Maps 10 
+
+
+Date: 20110912 (change 2 of 2) 
+The following steps were performed by Esri: Used the Sudan administrative division boundaries from Esri Data &amp; Maps 10 Update World Administrative Divisions to split Sudan into Sudan and South Sudan. Selected the new South Sudan polygon and updated its field values. Converted the data set to SDC. Created ArcGIS® layer file (.lyr), projection file (.prj), and spatial indices.
+
+Data sources used in this process: 
+The World Factbook Online 
+Updates on ISO 3166</statement>
+		</dataLineage>
+		<dqScope>
+			<scpLvl>
+				<ScopeCd value="005"/>
+			</scpLvl>
+		</dqScope>
+	</dqInfo>
+	<mdFileID Sync="TRUE">{20B4BE37-BBEC-462C-9283-402F52DE9325}</mdFileID>
+</metadata>

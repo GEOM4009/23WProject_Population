@@ -1,0 +1,165 @@
+~~~~~~~~ Testing setup ~~~~~~~~
+$ run popFinder -h
+
+    What is should show:
+        Takes a shapefile of delimation areas, a csv filled with static population
+        data and a csv filled with dynamic population data and allows the user to
+        calculate population based off of areas of intersets and certain times
+        
+        positional arguments:
+          DelAreaFile  The Delimination Area shapefile
+          StaticFile   The Static population data csv
+          DynamicFile  The Dynamic population data csv
+    
+    What is actually shows:
+        Takes a shapefile of delimation areas, a csv filled with static population
+        data and a csv filled with dynamic population data and allows the user to
+        calculate population based off of areas of intersets and certain times
+        
+        positional arguments:
+          DelAreaFile  The Delimination Area shapefile
+          StaticFile   The Static population data csv
+          DynamicFile  The Dynamic population data csv
+      
+$ run popFinder "./TestData/ExportedArea - Shapefile/ExportedAreas.shp" "./TestData/stat_can_data.csv"
+    What it should show
+         error: the following arguments are required: DynamicFile
+    
+    What it acutally shows
+        usage: popFinder.py [-h] DelAreaFile StaticFile DynamicFile
+        popFinder.py: error: the following arguments are required: DynamicFile
+        An exception has occurred, use %tb to see the full traceback.
+
+$ run popFinder "./TestData/ExportedArea - Shapefile/ExportedAreas.shp" "./TestData/stat_can_data.csv" "./TestData/stat_can_data.csv" 
+    What is should show
+        Exception: Sorry Something went wrong when you inputed the static and dynamic population data
+    
+    What it acutally shows:
+        Exception: Sorry Something went wrong when you inputed the static and dynamic population data
+
+$ run popFinder "./TestData/stat_can_data.csv" "./TestData/stat_can_data.csv" "./TestData/stat_can_data.csv"
+    What it should show
+        Exception: Sorry Something went wrong when you inputed the static and dynamic population dat
+    
+    What it actually shows:
+        Exception: Sorry Something went wrong when you inputed the static and dynamic population data
+
+$ run popFinder "./TestData/TestShapefile/africa_countries_ESRI.shp" "./TestData/stat_can_data.csv" "./TestData/mock_telus_data.csv"
+    What it should show
+        Exception: This shapefile does not have the proper coloumns
+    
+    What it actually shows:
+        Exception: This shapefile does not have the proper coloumns 
+
+~~~~~~~~ Testing Add an Area of Interest (1) ~~~~~~~~
+Please enter your kml path: ./TestData/TestPath.shp
+    What is should show:
+        AssertionError: I can not find the file at: ./TestData/TestPath.shp
+    
+    Whst it does show:
+        AssertionError: I can not find the file at: ./TestData/TestPath.shp
+
+Please enter your kml path: ./TestData/stat_can_data.csv
+    What it should show:
+        This file was not valid
+    
+    What it acutally shows:
+        This file was not valid
+
+~~~~~~~~ Testing Time Frame (2) ~~~~~~~~
+Please enter your date and time: 2023-02-10 2:00 AM
+    What is should show:
+        The date you entered is not in the dynamic file. Please try again
+    
+    What is actually shows:
+        The date you entered is not in the dynamic file. Please try again
+
+Note all other tests are in the docstring
+
+~~~~~~~~ Testing Recalculate your data(3) and Print your data (4) ~~~~~~~~
+NOTE that geometry was tested visaully
+no KML entered
+    What it should show:
+        
+    What it actually shows:
+
+TestPath entered with 2023-03-20 12:00 AM
+    What it should show:
+                 AOI_File_Name  Affected_Area  STAT_POP  STAT_POP_DENSITY  \
+    0  ./TestData/TestPath.kml           1.16     383.0         330.17241   
+
+                                                geometry  \
+    0  LINESTRING DATA   
+
+                                         Buffer_geometry  POP_2023-02-20 00:00:00  \
+    0  POLYGON DATA                                             383.0   
+
+       POP_DENSITY2023-02-20 00:00:00  
+    0                       330.17241  
+    
+    What is actually shows:
+                 AOI_File_Name  Affected_Area  STAT_POP  STAT_POP_DENSITY  \
+    0  ./TestData/TestPath.kml           1.16     383.0         330.17241   
+
+                                                geometry  \
+    0  LINESTRING Z (-79.69747 43.70838 0.00000, -79....   
+
+                                         Buffer_geometry  POP_2023-02-20 00:00:00  \
+    0  POLYGON ((-79.61453 43.68089, -79.53556 43.685...                    383.0   
+
+       POP_DENSITY2023-02-20 00:00:00  
+    0                       330.17241
+
+TestPath entered with a 2023-03-20 12:00 AM and then Test2KML
+    What it should show
+                     AOI_File_Name  Affected_Area  STAT_POP  STAT_POP_DENSITY  \
+        0  ./TestData/TestPath.kml           1.16     383.0         330.17241   
+        0  ./TestData/Test2KML.kml           3.22   1,701.0         528.26087   
+
+                                                    geometry  \
+        0  LINESTRING DATA
+        0  LINESTRING DATA   
+
+                                             Buffer_geometry  POP_2023-02-20 00:00:00  \
+        0  POLYGON DATA                                         383.0   
+        0  POLYGON DATA                                         1,701.0   
+
+           POP_DENSITY2023-02-20 00:00:00  
+        0                       330.17241  
+        0                       528.26087 
+    
+    What it actually shows
+                     AOI_File_Name  Affected_Area  STAT_POP  STAT_POP_DENSITY  \
+        0  ./TestData/TestPath.kml           1.16     383.0         330.17241   
+        0  ./TestData/Test2KML.kml           3.22   1,701.0         528.26087   
+
+                                                    geometry  \
+        0  LINESTRING Z (-79.69747 43.70838 0.00000, -79....   
+        0  MULTILINESTRING Z ((-79.39360 43.62745 0.00000...   
+
+                                             Buffer_geometry  POP_2023-02-20 00:00:00  \
+        0  POLYGON ((-79.61453 43.68089, -79.53556 43.685...                    383.0   
+        0  POLYGON ((-79.49879 43.65367, -79.49897 43.653...                  1,701.0   
+
+           POP_DENSITY2023-02-20 00:00:00  
+        0                       330.17241  
+        0                       528.26087 
+
+~~~~~~~~ Testing to export your data as a csv (5) ~~~~~~~~
+    Please check completed data
+    Same data as inputted above was check to have the smae output as print statement
+    Not included here to keep test suite small (like it said in the Team Project Progress Report 4)
+    
+~~~~~~~~ Testing to export your data as a geo package (6) ~~~~~~~~
+    Please check completed data
+    Same data as inputted above was check to have the smae output as print statement and visaully checked in arcgis
+    Not included here to keep test suite small (like it said in the Team Project Progress Report 4)
+
+~~~~~~~~ Testing to create and view your map (7) ~~~~~~~~
+    Please check completed data
+    Checked aganist model in arcgis and popup checked against above ouput
+    Not included here to keep test suite small (like it said in the Team Project Progress Report 4)
+    
+    Please note for the last 3 things we tested a mutiple differnt combinations of the above output and made sure we got the same numbers every time
+    We also checked aganist mutiple times
+    
