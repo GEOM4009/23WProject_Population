@@ -49,7 +49,9 @@ $ run popFinder "./TestData/TestShapefile/africa_countries_ESRI.shp" "./TestData
         Exception: This shapefile does not have the proper coloumns
     
     What it actually shows:
-        Exception: This shapefile does not have the proper coloumns 
+        Exception: This shapefile does not have the proper coloumns
+
+Also ran with other shpaefiles (seen in Test Shapefiles ) 
 
 ~~~~~~~~ Testing Add an Area of Interest (1) ~~~~~~~~
 Please enter your kml path: ./TestData/TestPath.shp
