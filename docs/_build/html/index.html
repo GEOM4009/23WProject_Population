@@ -32,61 +32,52 @@
             
   <section id="module-popFinder">
 <span id="welcome-to-population-project-s-documentation"></span><h1>Welcome to Population Project’s documentation!<a class="headerlink" href="#module-popFinder" title="Permalink to this heading">¶</a></h1>
-<p>Created on Wed Mar 15 20:54:35 2023
-Last updated on Thurs Mar 30, 2023</p>
-<p>&#64;author: Grace, Graham, Julien and Shaolin</p>
-<p>This program will allow the user to calculate an estimated population that a flight path (and it’s buffer) intercepts with
-The population is calcualted from a static population data and dynamic population data
-Once the user ends the program, all data that was not exported is lost and will need to be recaluated</p>
+<p>Created on Wed Mar 15 20:54:35 2023.
+Last updated on Thurs Mar 30, 2023.</p>
+<p>&#64;authors: Grace, Graham, Julien and Shaolin</p>
+<p>This program will allow the user to calculate an estimated population that a flight path (and its buffer) intercepts.
+The population is calculated from static population data (StatsCan table) and dynamic population data (TELUS table).
+Once the user ends the program, all data that was not exported is lost and will need to be recalculated.</p>
 <dl class="simple">
-<dt>This is an user lead program and the user can decide to do 8 things</dt><dd><ol class="arabic simple">
+<dt>This is a user lead program and the user can decide to do 8 things</dt><dd><ol class="arabic simple">
 <li><p>Add flight paths</p></li>
-<li><p>Add a 1 hour time frame</p></li>
+<li><p>Subset a 1 hour time frame</p></li>
 <li><p>Calculate the data</p></li>
 <li><p>Print the calculated data in the console</p></li>
-<li><p>Exported the calculated data as a csv</p></li>
-<li><p>Export the calculated data as a shapefile (note this will only be all the lines that were added from 1))</p></li>
-<li><p>View the map of all the delimation areas and flight paths</p></li>
-<li><p>Exported the map as a png -&gt; Please note that this funcitonality is on hold at the moment since it needs webdrivers</p></li>
+<li><p>Export the calculated data as a csv</p></li>
+<li><p>Export the calculated data as a geo packages</p></li>
+<li><p>View the map of all the dissemination areas and flight paths</p></li>
 </ol>
 </dd>
 <dt>This program takes in 3 files</dt><dd><ol class="arabic simple">
 <li><p>A shapefile of dissemination areas with a DAUID and a DGUID columns</p></li>
-<li><p>A dynaimc (Telus) csv with a DGUID, timeframe_bucket (%Y-%m-%d  %I:%M %p) and a count coloumns</p></li>
-<li><p>A static (Stat CAN) csv with a DAUID, POP_2016, POP_DESNITY and LANDAREA columns</p></li>
+<li><p>A dynamic (TELUS) csv with a DGUID, timeframe_bucket (%Y-%m-%d  %I:%M %p), and a count columns</p></li>
+<li><p>A static (StatsCan) csv with a DAUID, POP_2016, POP_DESNITY and LANDAREA columns</p></li>
 </ol>
 </dd>
 </dl>
 <p>If these files are not provided the tool will not work
 Here is an example : run popFinder “./TestData/ExportedArea - Shapefile/ExportedAreas.shp” “./TestData/stat_can_data.csv” “./TestData/mock_telus_data.csv”</p>
 <dl class="simple">
-<dt>STUFF TO DO —-</dt><dd><ol class="arabic simple">
-<li><p>Add proper Error Messages</p></li>
-<li><p>Add the recalulcate functionality to know not to recalculate everything</p></li>
-<li><p>Change kml valid funciton so it checks that in intercepts at least one area</p></li>
-<li><p>Figure out how to make a legend for Folium (for lines)</p></li>
-<li><p>Discuss what kind of bins we want for folium map</p></li>
-<li><p>Naming Folium layers</p></li>
-<li><p>connectnig the buffer and the line together in folium</p></li>
-<li><p>Figure out warning when recalculation (new error as of Thurs Mar 30, 2023)</p></li>
-</ol>
+<dt>Known Problems:</dt><dd><p>ARCGIS/ESRI shapefile cuts off the full column name for times.</p>
 </dd>
 </dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="popFinder.calculate_stat">
 <span class="sig-prename descclassname"><span class="pre">popFinder.</span></span><span class="sig-name descname"><span class="pre">calculate_stat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kml</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shapefile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#popFinder.calculate_stat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the stats according for one kml file</p>
+<dd><p>___Grace___
+Calculate the stats according to one kml file.n</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kml</strong> (<em>String</em>) – String to a valid kml</p></li>
-<li><p><strong>shapefile</strong> (<em>geo pandas df</em>) – A GDF with population data - note that we are assuming that this shapefile has DAUID, POP_2016, and coloumn anmes that match times
-<strong>* In the future perhaps this should be an object! This way we know that its in the proper format and we can add stuff to not recalculate the same data *</strong></p></li>
+<li><p><strong>shapefile</strong> (<em>geo pandas df</em>) – A GDF with population data - note that we are assuming that this shapefile has DAUID, POP_2016, and column names that match times
+<strong>* In the future perhaps this should be an object! This way we know that it is in the proper format and we can add stuff to not recalculate the same data *</strong></p></li>
 <li><p><strong>times</strong> (<em>List</em><em> of </em><em>datetimes</em>) – List of datetimes to calculate</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>temp_df</strong> – a gdf with the name of the kml, affected area (km^2), stat_pop, stat_density, and times + times density</p>
+<dd class="field-even"><p><strong>temp_df</strong> – A gdf with the name of the kml, affected area (km^2), stat_pop, stat_density, and times + population density for the specified times</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a geopandas df</p>
@@ -97,9 +88,10 @@ Here is an example : run popFinder “./TestData/ExportedArea - Shapefile/Export
 <dl class="py function">
 <dt class="sig sig-object py" id="popFinder.checkHeading">
 <span class="sig-prename descclassname"><span class="pre">popFinder.</span></span><span class="sig-name descname"><span class="pre">checkHeading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#popFinder.checkHeading" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function checks if a csv file has actually been inputted, if not, it raises an error,
-if it is a csv, then it check to see if it contains the expected headings,
-returns a dataframe if it does or raises an exception if it does not.
+<dd><p>___Julien___
+This function checks if a csv file has actually been inputted, if not, it raises an error.
+If it is a csv, then it checks to see if it contains the expected headings.
+Returns a dataframe if it does or raises an exception if it does not.
 Tested using different valid and invalid csvs, works appropriately.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -117,25 +109,21 @@ Tested using different valid and invalid csvs, works appropriately.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="popFinder.choropleth_map">
 <span class="sig-prename descclassname"><span class="pre">popFinder.</span></span><span class="sig-name descname"><span class="pre">choropleth_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shp_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aois</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#popFinder.choropleth_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>This creates a map of calculated lines and the dessimation areas
-The dessimation areas appear as a choropletm map
-The lines appear as oragne lines with thier buffers</p>
-<p>Please note that this function is still in the -TESTING PHASE-
-The parameters below might change
-Idea -&gt; call reculate in here so shp_df is update to data and accurate instead of passing it in
-We have the aois (for kml) and the times already getting passed through so it will work -&gt; BUT it will take time
-Discuss in next meeting</p>
+<dd><p>___Grace &amp; Julien___
+This creates a map of calculated lines and the dissemination areas
+The dissemination areas appear as a choropleth map
+The lines appear as orange lines with their buffers</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shp_df</strong> (<em>a geopandas df</em>) – The calculated shapefile that is created at the start of the</p></li>
-<li><p><strong>aois</strong> (<em>list</em><em> of </em><em>strings</em>) – list of all AOIs the user has inputed -&gt; this should match up with the recaulte function (will be solved with the recaulte)</p></li>
-<li><p><strong>times</strong> (<em>list</em><em> of </em><em>datetimes</em>) – List of all times the user has inputed -&gt; same as above</p></li>
-<li><p><strong>user_df</strong> (<em>geopandas df</em>) – The calculated shpaeifile that is done by the recalculate function</p></li>
+<li><p><strong>shp_df</strong> (<em>a geopandas df</em>) – The calculated shapefile that is created at the start of the tool</p></li>
+<li><p><strong>aois</strong> (<em>list</em><em> of </em><em>strings</em>) – List of all AOIs the user has inputted -&gt; this should match up with the recalculate function (will be solved with the recalculate)</p></li>
+<li><p><strong>times</strong> (<em>list</em><em> of </em><em>datetimes</em>) – List of all times the user has inputted -&gt; same as above</p></li>
+<li><p><strong>user_df</strong> (<em>geopandas df</em>) – The calculated shapefile that is done by the recalculate function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>m</strong> – A folium map with the dessmination areas and lines
+<dd class="field-even"><p><strong>m</strong> – A folium map with the dissemination areas and lines
 Please note that this only returns something for exporting -&gt; which is something that is removed right now. If exporting is to stay removed then this should
 return nothing</p>
 </dd>
@@ -148,10 +136,13 @@ return nothing</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="popFinder.validAOI">
 <span class="sig-prename descclassname"><span class="pre">popFinder.</span></span><span class="sig-name descname"><span class="pre">validAOI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#popFinder.validAOI" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function will check if the file is infact a kml
-TO BE DONE AT A LATER TIME -&gt; check if it intercepts any polygon in shapefile
+<dd><p>___Graham___
+This function will check if the file is a valid kml.
+This function does not check whether the kml file contains a linestring, point, or polygon, because all
+three will work either way
+However, this function also does not check whether or not the kml intersects a dissemination area because it is possible for the buffer to intersect the area but not the line.
 Return True if valid
-Return false if not</p>
+Return False if not</p>
 <p>The function was tested by running in the command line with different file paths.
 A path to two different kml files was tested, all returned True.
 A gpkg file was tested for reference, it returned False.</p>
@@ -171,17 +162,18 @@ A gpkg file was tested for reference, it returned False.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="popFinder.validDate">
 <span class="sig-prename descclassname"><span class="pre">popFinder.</span></span><span class="sig-name descname"><span class="pre">validDate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#popFinder.validDate" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function will check if the date is in the proper format of YYYY-MM-DD HH:MM P</p>
+<dd><p>___Shaolin___</p>
+<p>This function will check if the date is in the proper format of YYYY-MM-DD HH:MM P</p>
 <p>P in this case is either AM or PM</p>
 <p>This function was tested with the below code and worked:
-print (valid_date (“2023-02-20 12:00 AM”)) #prints True
-print (valid_date (“2023-02-10 2:00 AM”)) #prints True
-print (valid_date(‘2/26/2009 3:00 PM’))  # prints False, must have hyphens (-) not slashes (/)
-print (valid_date (‘21-11-06 2:00 AM’))  # prints False, must have 2021 not 21
-print (valid_date (‘2023-02-20  12:00:00 AM’))  # prints False, has extra seconds in string
-print (valid_date (“2023-02-10 20:00 AM”))# prints False the hour must be in a 12-hour clock as a zero-padded decimal number (i.e. 01, 02, …, 12).</p>
+print (validdate (“2023-02-20 12:00 AM”)) #prints True
+print (validdate (“2023-02-10 2:00 AM”)) #prints True
+print (validdate (‘2/26/2009 3:00 PM’))  # prints False, must have hyphens (-) not slashes (/)
+print (validdate (‘21-11-06 2:00 AM’))  # prints False, must have 2021 not 21
+print (validdate (‘2023-02-20  12:00:00 AM’))  # prints False, has extra seconds in string
+print (validdate (“2023-02-10 20:00 AM”))# prints False the hour must be in a 12-hour clock as a zero-padded decimal number (i.e. 01, 02, …, 12).</p>
 <p>Return True if valid
-Return false if not</p>
+Return False if not</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>date</strong> (<em>String</em>) – The input or desired date.</p>
@@ -255,7 +247,7 @@ Return false if not</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2023, Grace Thompson , Graham Scott , Julien Belair , Shaolin-Rose Gawat.
+      &copy;2023, Grace Thompson, Graham Scott, Graham Scott, Shaolin-Rose Gawat.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>

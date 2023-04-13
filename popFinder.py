@@ -5,7 +5,6 @@ Last updated on Thurs Mar 30, 2023.
 
 @authors: Grace, Graham, Julien and Shaolin
 
-
 This program will allow the user to calculate an estimated population that a flight path (and its buffer) intercepts.
 The population is calculated from static population data (StatsCan table) and dynamic population data (TELUS table).
 Once the user ends the program, all data that was not exported is lost and will need to be recalculated.
@@ -16,19 +15,23 @@ This is a user lead program and the user can decide to do 8 things
     3) Calculate the data 
     4) Print the calculated data in the console
     5) Export the calculated data as a csv
-    6) Export the calculated data as a geo packages
+    6) Export the calculated data as a shapefile (note this will only contain all the lines that were added from choice number 1))
     7) View the map of all the dissemination areas and flight paths
+    8) Export the map as a png -> Please note that this functionality is on hold at the moment since it needs webdrivers
                                                                                          
 This program takes in 3 files
     1) A shapefile of dissemination areas with a DAUID and a DGUID columns
     2) A dynamic (TELUS) csv with a DGUID, timeframe_bucket (%Y-%m-%d  %I:%M %p), and a count columns
-    3) A static (StatsCan) csv with a DAUID, POP_2016, POP_DESNITY and LANDAREA columns
+    3) A static (StatsCan) csv with a DAUID, POP_2016, POP_DENSITY and LANDAREA columns
 
 If these files are not provided the tool will not work
 Here is an example : run popFinder "./TestData/ExportedArea - Shapefile/ExportedAreas.shp" "./TestData/stat_can_data.csv" "./TestData/mock_telus_data.csv"
+<<<<<<< HEAD
 
 Known Problems:
     ARCGIS/ESRI shapefile cuts off the full column name for times.
+=======
+>>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
 """
 # -----------------------------------------------------IMPORTS
 import argparse
@@ -62,19 +65,28 @@ EXPECTED_HEADINGS_TELUS = [
 EXPECTED_HEADINGS_STAT = [
     "DAUID",
     "POP_2016",
-    "POP_DESNITY",
+    "POP_DENSITY",
     "LANDAREA",
 ]  # DESNITY
 
+<<<<<<< HEAD
+# Buffer 500 feet
+# NOTICE - Buffer is not set to change - Perhaps in the future a buffer calculation function can be done
+=======
 EXPECTED_HEADINGS_SHAPE = ["DAUID", "DGUID"]
 
 #Buffer 500 feet
 #NOTICE - Buffer is not set to change - Perhaps in the future a buffer calculation function can be done
+>>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
 BUFFER = 152.4
 
 # CRS for buffer calculations
 CRS = "ESRI:102002"
 
+<<<<<<< HEAD
+# For formatting numbers
+pd.options.display.float_format = "{:,}".format
+=======
 #Flags
 global DYNFLAG
 DYNFLAG = False
@@ -83,6 +95,8 @@ STATFLAG = False
 
 #For formatting numbers
 pd.options.display.float_format = '{:,}'.format
+>>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
+
 
 # ----------------------------------------------------Checking data functions
 def checkHeading(filepath):
@@ -91,6 +105,7 @@ def checkHeading(filepath):
     This function checks if a csv file has actually been inputted, if not, it raises an error.
     If it is a csv, then it checks to see if it contains the expected headings.
     Returns a dataframe if it does or raises an exception if it does not.
+
     Tested using different valid and invalid csvs, works appropriately.
 
     Parameters
@@ -148,13 +163,10 @@ def validAOI(filepath):
 
     """
     print(filepath)
-   # assert os.path.exists(filepath), "I can not find the file at: " + str(
-    #    filepath
-    #)
-    if not(os.path.exists(filepath)):
-        print("I can not find the file at :" + str(filepath))
-        return False
-    elif filepath.endswith(".kml"):
+    assert os.path.exists(filepath), "I can not find the file at: " + str(
+        filepath
+    )
+    if filepath.endswith(".kml"):
         return True
     else:
         return False
@@ -201,7 +213,7 @@ def validDate(date):
 def calculate_stat(kml, shapefile, times):
     """
     ___Grace___
-    Calculate the stats according to one kml file.n
+    Calculate the stats according to one kml file.
 
     Parameters
     ----------
@@ -232,9 +244,14 @@ def calculate_stat(kml, shapefile, times):
 
     # Get area
     subset["intersectArea"] = subset.area
+<<<<<<< HEAD
+
+    # Calculate weight and caluclate weighted pop
+=======
     subset = subset.to_crs(CRS)
     
     #Calculate weight and caluclate weighted pop
+>>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
     subset["weight"] = subset["intersectArea"] / subset["Shape_Area"]
     subset["weightedPop"] = subset["POP_2016"] * subset["weight"]
 
@@ -328,19 +345,19 @@ def choropleth_map(shp_df, aois, times, user_df):
     )
 
     # Create a choropleth map based on the STAT_POP_DENSITY field
-    # density_list = shp_df['POP_DESNITY'].tolist()
+    # density_list = shp_df['POP_DENSITY'].tolist()
     # max_density = max(density_list)
 
     # Still deciding which is best
     # density_bins = [0, max_density * 0.2, max_density * 0.4, max_density * 0.6, max_density * 0.8, max_density]
-    bins = list(shp_df["POP_DESNITY"].quantile([0, 0.25, 0.5, 0.75, 1]))
+    bins = list(shp_df["POP_DENSITY"].quantile([0, 0.25, 0.5, 0.75, 1]))
 
     # https://towardsdatascience.com/creating-choropleth-maps-with-pythons-folium-library-cfacfb40f56a
     folium.Choropleth(
         geo_data=shp_df,
         name="Population Density in Toronto",
         data=shp_df,
-        columns=["DAUID", "POP_DESNITY"],
+        columns=["DAUID", "POP_DENSITY"],
         key_on="feature.properties.DAUID",
         # fill_color='blue',
         fill_opacity=0.9,
@@ -352,52 +369,46 @@ def choropleth_map(shp_df, aois, times, user_df):
     ).add_to(m)
 
     # Add the AOIs to the map as overlays
-    for ( _, r,) in (user_df.iterrows()):  # - https://gis.stackexchange.com/questions/397790/map-geopandas-dataframe-with-folium-no-results
+    for (
+        _,
+        r,
+    ) in (
+        user_df.iterrows()
+    ):  # - https://gis.stackexchange.com/questions/397790/map-geopandas-dataframe-with-folium-no-results
         # This is the line
         sim_geo = gpd.GeoSeries(r["geometry"])
         geo_j = sim_geo.to_json()
         geo_j = folium.GeoJson(
             data=geo_j,
-            name=r["AOI_File_Name"],
             style_function=lambda x: {
                 "color": "orange",
                 "fillColor": "#ff7800",
             },
         )
-        
-        #Let's make some html - 
-        html = """
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <h4>{}</h4>""".format(r["AOI_File_Name"]) + """
-                </head>
-                <table><tbody>
-                    <tr>
-                        <td> Affected Area </td>
-                        <td>{}</td>""".format(str(r["Affected_Area"])) + """
-                    </tr>
-                    <tr>
-                        <td> Static population </td>
-                        <td>{}</td>""".format(str(r["STAT_POP"]))
+
+        # For hovering
+        string = (
+            "File Name: "
+            + r["AOI_File_Name"]
+            + "\n\n Affected Area: "
+            + str(r["Affected_Area"])
+            + "\n\n Static Population: "
+            + str(r["STAT_POP"])
+        )
+
         for time in times:
-            html += """
-                    <tr>
-                        <td> Population at {} </td>""".format(str(time)) +"""
-                        <td>{}</td>""".format(str(r["POP_" + str(time)])) +"""
-                    </tr>
-                    """
-            
-        html += """</tbody></table></html>"""
-            
-        
+            string += (
+                "\n\n Population at "
+                + str(time)
+                + " : "
+                + str(r["POP_" + str(time)])
+            )
 
         # This is a buffer
         sim_buff = gpd.GeoSeries(r["Buffer_geometry"])
         geo_b = sim_buff.to_json()
         geo_b = folium.GeoJson(
             data=geo_b,
-            name=r["AOI_File_Name"] + " Buffer",
             style_function=lambda x: {
                 "color": "orange",
                 "fillColor": "#ff7800",
@@ -405,9 +416,8 @@ def choropleth_map(shp_df, aois, times, user_df):
             },
         )
 
-        folium.Popup(html).add_to(geo_b)
-        
-        
+        folium.Popup(string).add_to(geo_b)
+
         # Add buffer and line to map
         geo_b.add_to(m)
         geo_j.add_to(m)
@@ -421,7 +431,7 @@ def choropleth_map(shp_df, aois, times, user_df):
 
 
 def main():
-    #First let's create the data
+    # First let's create the data
     parser = argparse.ArgumentParser(
         prog="popFinder.py",
         description="Takes a shapefile of delimation areas, a csv filled with static population data and a csv filled with dynamic population data and allows the user to calculate population based off of areas of intersets and certain times",
@@ -439,6 +449,10 @@ def main():
     if(not DYNFLAG or not STATFLAG):
         raise Exception("Sorry Something went wrong when you inputed the static and dynamic population data")
 
+<<<<<<< HEAD
+    # For right now - let's assume that the the shapefile and two csv share some DGUIDS.
+    shp_df = gpd.read_file(args.DelAreaFile)
+=======
     # Let's assume that all 3 files have interlapping DAUID and DGUID - since that is kind of on the user to know
     if not args.DelAreaFile.endswith('.shp'):
         raise ValueError("Sorry,"+ args.DelAreaFile + " is not a Shapefile file.")
@@ -446,7 +460,7 @@ def main():
         shp_df = gpd.read_file(args.DelAreaFile)
         if not all(item in list(shp_df.columns) for item in EXPECTED_HEADINGS_SHAPE):
             raise Exception("This shapefile does not have the proper coloumns")
-
+>>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
     shp_df = shp_df.to_crs(CRS)
     shp_df["Shape_Area"] = shp_df.area
 
@@ -457,17 +471,17 @@ def main():
 
     shp_df = pd.merge(
         shp_df,
-        stat_df[["DAUID", "POP_2016", "POP_DESNITY"]],
+        stat_df[["DAUID", "POP_2016", "POP_DENSITY"]],
         how="inner",
         on="DAUID",
     )
 
-    #Let's store our AOIs
+    # Let's store our AOIs
     aois = []
-    #Let's store our times
+    # Let's store our times
     times = []
 
-    #Let's store our calculations
+    # Let's store our calculations
     user_df = pd.DataFrame(columns=["AOI_File_Name"])
 
     # Now let's make the loop
@@ -481,7 +495,7 @@ def main():
         print("\t3) to recalculate your data")
         print("\t4) to print your data")
         print("\t5) to export your data as a csv")
-        print("\t6) to export your data as a geo package ")
+        print("\t6) to export your data as a shp ")
         print("\t7) to create and view your map")
         input_str = input(
             "Please enter some input, or type 'done' to finish: "
@@ -501,7 +515,7 @@ def main():
             if validAOI(input_aoi):
                 aois.append(input_aoi)
             else:
-                print("This file was not a kml file")
+                print("This file was not valid")
 
         # Entering the times
         elif input_str == "2":
@@ -542,7 +556,9 @@ def main():
                     user_df = pd.concat([user_df, temp_df], sort=False)
             except:
                 print("Something went wrong when calculating - resetting old")
-                print("As of this moment the best way to fix this problem is to restart the entire program")
+                print(
+                    "As of this moment the best way to fix this problem is to restart the entire program"
+                )
                 user_df = old_df
 
         # Printing the table
@@ -560,7 +576,7 @@ def main():
             try:
                 csv_df.to_csv("FlightPath.csv")
             except Exception as e:
-                print("Something went wrong - See Below")
+                print("Something went wrong")
                 print(e)
 
         # Exporting data as shapefile
@@ -573,14 +589,20 @@ def main():
             )
 
             try:
-                sh_gdf.to_file("FlightPath.gpkg")
+                sh_gdf.to_file("FlightPath.shp")
             except Exception as e:
-                print("Something went wrong - See Below")
+                print("Something went wrong")
                 print(e)
 
         # This calculates and makes an html page of the map
         elif input_str == "7":
             map_out = choropleth_map(shp_df, aois, times, user_df)
+
+        elif input_str == "8":
+            # https://stackoverflow.com/questions/53565979/export-a-folium-map-as-a-png
+            # PLEASE NOTE: FOLIUM does not have a good export png function. One must open the map and then take a screenshot.
+            # We are asking today (2023/03/30) if the html page is what is wanted - OR - if the program could have access to webdrivers so that the user can export to png.
+            continue
 
         else:
             print("\n Not a valid input")
