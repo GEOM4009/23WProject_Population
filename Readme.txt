@@ -66,3 +66,34 @@ This is a user lead program and the user can decide to do 7 things
     Note this is a feature folium is planning on adding in the future. Using the enviroment, no TypeError should appear. 
  
  ------------------------------------------------------
+~~~ PopulationProjectFinal Direcorty Setup ~~~
+CompletedData
+    FlightPath.csv -> An exmaple of a csv from (5) Export the calculated data as a csv
+    FlightPath.gpkg -> An example of gpkg from (6) Export the calcualted data as a geopackage
+    HowToCreate.txt -> An example of user input (along with the programs output)
+    OtherTests.txt -> What other tests where preformed when testing the popFinder.py file
+    map.html -> An example of a html output from (7) View tha map of all dissemnation areas and flight paths
+    
+ TestData
+    All Toronto - Shapefile
+        AllToronto.shp (and assocaited ESRI shapefile files) -> Shapefile of all dessmination areas in Toronto
+    ExportedAreas - Shapefile
+        ExportedAreas.shp (and associated ESRI shapefile files) -> Shapefile of 11 dessimation area in Toronto
+    TestShapefile
+        africa_countries_ESRI.shp (and assocaited ESRI shpaefile files) -> Shapefile (by ESRI) of African Countries (For testing shpaefiles with no DAUID of DGUID)
+     Test2KML.kml -> A line kml file going thorugh Toronto
+     TestPath.kml -> A line kml file going through Toronto
+     TestPoints.kml -> Points around Toronto 
+     TestPolygons.kml -> A polygon around Toronto
+     mock_telus_data.csv -> A mock dynamic file that could be used
+     stat_can_data.csv -> A static data file that could be used (Population from Statistic Canada 2016)
+  
+  docs -> Sphinx Documentation about PopFinder. Please note that Sphinx autodocumentaion is removed from this version of the code, perhaps in a future version it would be reinstated. 
+    This is to view the fucntions in popFinder.py. Open up ./docs/_build/index.html to view. 
+    Perhaps in the future, full sphinx documenation could be reinstaded. But as it was not requested by our client, we've decided to keep it out
+  Readme.txt -> Gives infomation about the entire project
+  environment.yml -> the conda enviroment (Please see above about how to get started)
+  licence.txt -> the licence of this project
+  popFinder.py-> The main file in this project. This file will allow you to find the estimated population in dessmination areas from both static and dynamic data
+ 
+     
