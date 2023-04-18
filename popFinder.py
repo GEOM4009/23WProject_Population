@@ -26,12 +26,9 @@ This program takes in 3 files
 
 If these files are not provided the tool will not work
 Here is an example : run popFinder "./TestData/ExportedArea - Shapefile/ExportedAreas.shp" "./TestData/stat_can_data.csv" "./TestData/mock_telus_data.csv"
-<<<<<<< HEAD
 
 Known Problems:
     ARCGIS/ESRI shapefile cuts off the full column name for times.
-=======
->>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
 """
 # -----------------------------------------------------IMPORTS
 import argparse
@@ -69,24 +66,17 @@ EXPECTED_HEADINGS_STAT = [
     "LANDAREA",
 ]  # DESNITY
 
-<<<<<<< HEAD
-# Buffer 500 feet
-# NOTICE - Buffer is not set to change - Perhaps in the future a buffer calculation function can be done
-=======
+
 EXPECTED_HEADINGS_SHAPE = ["DAUID", "DGUID"]
 
 #Buffer 500 feet
 #NOTICE - Buffer is not set to change - Perhaps in the future a buffer calculation function can be done
->>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
 BUFFER = 152.4
 
 # CRS for buffer calculations
 CRS = "ESRI:102002"
 
-<<<<<<< HEAD
-# For formatting numbers
-pd.options.display.float_format = "{:,}".format
-=======
+
 #Flags
 global DYNFLAG
 DYNFLAG = False
@@ -95,7 +85,6 @@ STATFLAG = False
 
 #For formatting numbers
 pd.options.display.float_format = '{:,}'.format
->>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
 
 
 # ----------------------------------------------------Checking data functions
@@ -244,14 +233,9 @@ def calculate_stat(kml, shapefile, times):
 
     # Get area
     subset["intersectArea"] = subset.area
-<<<<<<< HEAD
-
-    # Calculate weight and caluclate weighted pop
-=======
     subset = subset.to_crs(CRS)
     
     #Calculate weight and caluclate weighted pop
->>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
     subset["weight"] = subset["intersectArea"] / subset["Shape_Area"]
     subset["weightedPop"] = subset["POP_2016"] * subset["weight"]
 
@@ -449,10 +433,6 @@ def main():
     if(not DYNFLAG or not STATFLAG):
         raise Exception("Sorry Something went wrong when you inputed the static and dynamic population data")
 
-<<<<<<< HEAD
-    # For right now - let's assume that the the shapefile and two csv share some DGUIDS.
-    shp_df = gpd.read_file(args.DelAreaFile)
-=======
     # Let's assume that all 3 files have interlapping DAUID and DGUID - since that is kind of on the user to know
     if not args.DelAreaFile.endswith('.shp'):
         raise ValueError("Sorry,"+ args.DelAreaFile + " is not a Shapefile file.")
@@ -460,7 +440,7 @@ def main():
         shp_df = gpd.read_file(args.DelAreaFile)
         if not all(item in list(shp_df.columns) for item in EXPECTED_HEADINGS_SHAPE):
             raise Exception("This shapefile does not have the proper coloumns")
->>>>>>> 3dad6be96a642fd234d1e364383fbdc9003273ec
+
     shp_df = shp_df.to_crs(CRS)
     shp_df["Shape_Area"] = shp_df.area
 
