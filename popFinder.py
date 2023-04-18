@@ -333,14 +333,14 @@ def choropleth_map(shp_df, aois, times, user_df):
 
     # Still deciding which is best
     # density_bins = [0, max_density * 0.2, max_density * 0.4, max_density * 0.6, max_density * 0.8, max_density]
-    bins = list(shp_df["POP_DESNITY"].quantile([0, 0.25, 0.5, 0.75, 1]))
+    bins = list(shp_df["POP_DENSITY"].quantile([0, 0.25, 0.5, 0.75, 1]))
 
     # https://towardsdatascience.com/creating-choropleth-maps-with-pythons-folium-library-cfacfb40f56a
     folium.Choropleth(
         geo_data=shp_df,
         name="Population Density in Toronto",
         data=shp_df,
-        columns=["DAUID", "POP_DESNITY"],
+        columns=["DAUID", "POP_DENSITY"],
         key_on="feature.properties.DAUID",
         # fill_color='blue',
         fill_opacity=0.9,
@@ -457,7 +457,7 @@ def main():
 
     shp_df = pd.merge(
         shp_df,
-        stat_df[["DAUID", "POP_2016", "POP_DESNITY"]],
+        stat_df[["DAUID", "POP_2016", "POP_DENSITY"]],
         how="inner",
         on="DAUID",
     )
